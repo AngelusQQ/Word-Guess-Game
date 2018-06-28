@@ -1,10 +1,32 @@
-var start;
-var time = [1, 5, 0];
+// var start;
+// var time = [1, 5, 0];
+var Game = {
+  start: "",
+  hours: 1,
+  minutes: 5,
+  seconds: 0,
+  score: 0,
+  lives: 0,
+  letters: 0,
+  words: ["Apple", "Orange", "Banana"],
+  currentWord: "",
+  currentDisplay: "__ ",
+
+  chooseRandomWord: function () {
+    this.currentWord = this.words[Math.floor(Math.random() * 3)];
+    console.log("Chosen Word: " + this.currentWord);
+    for (var i = 0; i < this.currentWord.length-1; i++) {
+
+    }
+    document.getElementById("Display").textContent = this.currentDisplay;
+  }
+};
 
 
 
 //document.getElementById("Body").style.backgroundSize = "60px 120px";
 window.onload = function(){
+  Game.chooseRandomWord();
 
   //Volume Adjustments
   document.getElementById("Jigsaw").volume = 0.4;
