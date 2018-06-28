@@ -1,0 +1,49 @@
+BODY {
+  width:100%;
+  background-image: url("../images/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color:black;
+  color:white;
+}
+
+HEADER {
+  text-align:center;
+}
+
+#Info {
+  text-align:right;
+  margin-right:50%;
+}
+
+#Jigsaw {
+  margin-right:-20%;
+  margin-top:15%;
+}
+
+#Display {
+  margin-top:20%;
+}
+
+#Time {
+  /* margin-right:-5.10%; */
+  text-align:center;
+  margin-right:-100%;
+  margin-top:15%;
+  font-size:120px;
+  color:red;
+}
+
+P {
+  display:inline;
+}
+
+.btn {
+  float:left;
+  font-size:40px;
+  width:33%;
+}
+
+#Start {
+  width:100%
+}
