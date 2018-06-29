@@ -1,13 +1,13 @@
 // var start;
 // var time = [1, 5, 0];
 var Game = {
-  start: "",
+  start: true,
   hours: 1,
   minutes: 5,
   seconds: 0,
   score: 0,
   lives: 0,
-  letters: 0,
+  lettersUsed: "",
   words: ["Apple", "Orange", "Banana"],
   currentWord: "",
   currentDisplay: "_ ",
@@ -38,13 +38,13 @@ window.onload = function(){
 
   document.getElementById("Jigsaw").onmouseup = function () {
     setTimeout(function() {
-      start = false;
+      Game.start = false;
     }, 23000)
   };
 
   document.getElementById("Easy").onmouseup = function() {
-    if (start === false) {
-      start = true;
+    if (Game.start === false) {
+      Game.start = true;
       document.getElementById("AudioEasy").play();
       setTimeout(changeTime, 6000);
       setTimeout(startFunction, 11000);
@@ -52,8 +52,8 @@ window.onload = function(){
   };
 
   document.getElementById("Medium").onmouseup = function() {
-    if (start === false) {
-      start = true;
+    if (Game.start === false) {
+      Game.start = true;
       document.getElementById("AudioMedium").play();
       setTimeout(changeTime, 9500);
       setTimeout(startFunction, 14000);
@@ -61,8 +61,8 @@ window.onload = function(){
   };
 
   document.getElementById("Hard").onmouseup = function() {
-    if (start === false) {
-      start = true;
+    if (Game.start === false) {
+      Game.start = true;
       document.getElementById("AudioHard").play();
       setTimeout(changeTime, 12000);
       setTimeout(startFunction, 16000);
@@ -70,8 +70,9 @@ window.onload = function(){
   };
 
   document.onkeyup = function(event) {
-    if (start === true) {
-
+    if (Game.start === true && event.keyCode >= 65 && event.keyCode <= 90 && Game.lettersUsed.includes(event.key) === false) {
+      Game.lettersUsed = Game.lettersUsed + event.key + ", ";
+      document.getElementById("Letters").textContent = Game.lettersUsed;
     }
   };
 
@@ -82,12 +83,11 @@ window.onload = function(){
   };
 
   function startFunction() {
-    console.log("LET THE GAMES BEGIN");
     setInterval(function () { timerSeconds(time[2]) }, 1000);
     document.getElementById("DIFFICULTY").style.display = "none";
     document.getElementById("Jigsaw").style.display = "none";
     document.getElementById("Time").style.margin = "25% -100% 0px 0px";
-    start = true;
+    Game.start = true;
   };
 
   function timerSeconds(i) {
