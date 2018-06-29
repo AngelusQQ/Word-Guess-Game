@@ -1,6 +1,6 @@
 BODY {
   width:100%;
-  background-image: url("../images/wallpaper.jpg");
+  /* background-image: url("../images/wallpaper.jpg"); */
   background-repeat: no-repeat;
   background-size: contain;
   background-color:black;
@@ -11,13 +11,18 @@ HEADER {
   text-align:center;
 }
 
+#Display {
+  font-size:64px;
+  margin-right:-20%;
+}
+
 #Info {
   text-align:right;
   margin-right:50%;
 }
 
 #Jigsaw {
-  margin-right:-20%;
+  margin-right:-25%;
   margin-top:15%;
 }
 

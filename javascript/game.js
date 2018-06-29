@@ -10,13 +10,13 @@ var Game = {
   letters: 0,
   words: ["Apple", "Orange", "Banana"],
   currentWord: "",
-  currentDisplay: "__ ",
+  currentDisplay: "_ ",
 
   chooseRandomWord: function () {
     this.currentWord = this.words[Math.floor(Math.random() * 3)];
     console.log("Chosen Word: " + this.currentWord);
     for (var i = 0; i < this.currentWord.length-1; i++) {
-
+      this.currentDisplay = this.currentDisplay + "_ ";
     }
     document.getElementById("Display").textContent = this.currentDisplay;
   }
