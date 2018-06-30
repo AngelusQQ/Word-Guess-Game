@@ -9,7 +9,6 @@ var Game = {
   lives: 3,
   round: 0,
   lettersUsed: "",
-  hints: ["An ____ a Day will keep the Doctor Away.", "\"_____ is the new Black\"", "Category: Fruit"],
   words: [["fruits", "apple", "orange", "banana"],["animals", "dog", "cat", "mouse"],["colors", "red" ,"yellow", "blue"]],
   currentWord: "",
   currentDisplay: "_ ",
