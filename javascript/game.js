@@ -37,11 +37,9 @@ window.onload = function(){
   document.getElementById("Tick").volume = 1.0;
   document.getElementById("Beep").volume = 0.1;
 
-  document.getElementById("Jigsaw").onmouseup = function () {
-    setTimeout(function() {
-      Game.start = false;
-    }, 22500)
-  };
+  document.getElementById("Jigsaw").onended = function() {
+    Game.start = false;
+  }
 
   document.getElementById("Easy").onmouseup = function() {
     if (Game.start === false) {
