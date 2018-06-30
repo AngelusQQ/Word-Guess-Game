@@ -7,16 +7,14 @@
     <script src="javascript/game.js" type="text/javascript"></script>
 
   </HEAD>
-  <HEADER>
-    <H1>Round: <P id="Round">0</P></H1>
-  </HEADER>
   <BODY id="Body">
     <BR>
     <DIV id="Info">
       <DIV>Number of Words Guessed: <P id="Words">0</P></DIV>
-      <DIV>Number of <STRIKE>Lives</STRIKE> Guesses Remaining: <P id="Guesses">0</p></DIV>
-      <DIV>Letters already Guessed: <P id="Letters">0<P></DIV>
+      <DIV>Number of <STRIKE>Lives</STRIKE> Guesses Remaining: <P id="Guesses">10</p></DIV>
+      <DIV>Letters already Guessed: <P id="Letters"><P></DIV>
       <DIV id="Display"></DIV>
+      <DIV id="Category"></DIV>
       <audio id="Jigsaw" controls src="./sounds/GAME.m4a"> Your browser does not support the <code>audio</code> element. </audio>
       <audio id="AudioEasy" src="./sounds/EASY.m4a"> Your browser does not support the <code>audio</code> element. </audio>
       <audio id="AudioMedium" src="./sounds/MEDIUM.m4a"> Your browser does not support the <code>audio</code> element. </audio>
@@ -26,6 +24,7 @@
       <DIV id="Time"><P id="Hours">01</P>:<P id="Minutes">00</P>:<P id="Seconds">00</P></DIV>
     </DIV>
   </BODY>
+  <button type="button" id="Restart" class="btn btn-dark">Please ... One more Chance!</button>
   <FOOTER id="DIFFICULTY">
     <button type="button" id="Easy" class="btn btn-success">Easy</button>
     <button type="button" id="Medium" class="btn btn-warning">Medium</button>

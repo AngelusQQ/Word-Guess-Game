@@ -1,6 +1,6 @@
 BODY {
   width:100%;
-  /* background-image: url("../images/wallpaper.jpg"); */
+  background-image: url("../images/wallpaper.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-color:black;
@@ -11,27 +11,30 @@ HEADER {
   text-align:center;
 }
 
-#Display {
-  font-size:64px;
-  margin-right:-20%;
+P {
+  display:inline;
 }
 
 #Info {
   text-align:right;
   margin-right:50%;
+  font-size:28px;
 }
 
 #Jigsaw {
-  margin-right:-25%;
+  margin-right:-15%;
   margin-top:15%;
+  text-align:center;
 }
 
-#Display {
-  margin-top:20%;
+#Display, #Category {
+  margin-top:5%;
+  text-align:center;
+  margin-right:-100%;
+  font-size:80px;
 }
 
 #Time {
-  /* margin-right:-5.10%; */
   text-align:center;
   margin-right:-100%;
   margin-top:15%;
@@ -39,16 +42,47 @@ HEADER {
   color:red;
 }
 
-P {
-  display:inline;
+#Restart {
+  width:100%;
+  font-size:40px;
+  text-align:center;
+  margin-top: -15%;
 }
 
 .btn {
   float:left;
   font-size:40px;
   width:33%;
+  margin-top:10%;
 }
 
-#Start {
-  width:100%
+@media only screen and (max-width: 960px) {
+  #Info {
+    font-size:18px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #Info {
+    font-size:10px;
+  }
+
+  #Time {
+    font-size:64px;
+  }
+
+  #Jigsaw {
+    margin-top: 80%;
+  }
+
+  .btn {
+    font-size:20px;
+    margin-top:40%;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  #Restart {
+    margin-top:-30%;
+  }
 }
