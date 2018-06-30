@@ -6,7 +6,7 @@ var Game = {
   minutes: 5,
   seconds: 0,
   score: 0,
-  lives: 10,
+  lives: 3,
   round: 0,
   lettersUsed: "",
   hints: ["An ____ a Day will keep the Doctor Away.", "\"_____ is the new Black\"", "Category: Fruit"],
@@ -77,7 +77,7 @@ window.onload = function(){
     Game.start = true;
     Game.currentWord = "";
     Game.currentDisplay = "_ ";
-    Game.lives = 10;
+    Game.lives = 3;
     document.getElementById("Guesses").textContent = Game.lives;
     Game.lettersUsed = "";
     document.getElementById("Letters").textContent = Game.lettersUsed;
